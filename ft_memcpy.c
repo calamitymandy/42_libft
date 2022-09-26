@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/15 15:52:25 by amdemuyn          #+#    #+#             */
+/*   Updated: 2022/09/15 18:05:44 by amdemuyn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	size_t	i;
+	char	*str1;
+	char	*str2;
+
+	i = 0;
+	str1 = (char *)dst;
+	str2 = (char *)src;
+	while (i < n)
+	{
+		str1[i] = str2[i];
+		i++;
+	}
+	return (dst);
+}
+
+/*int	main(void)
+{
+	char	dst[] = "voy a ver";
+	char	src[] = "pffffff";
+
+	printf("%s", ft_memcpy(dst, src, 4));
+}*/

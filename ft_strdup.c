@@ -6,7 +6,7 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 13:40:28 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/26 18:19:19 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/09/26 19:21:00 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,12 @@ void	ft_print_result(char const *s)
 	write(1, s, len);
 }
 
-int		main(int argc, const char *argv[])
+int		main(void)
 {
 	char	str[] = "lorem ipsum dolor sit amet";
 	char	*str_dup;
-
-	alarm(5);
-	if (argc == 1)
-		return (0);
-	if (atoi(argv[1]) == 1)
-	{
-		if (!(str_dup = ft_strdup(str)))
-			ft_print_result("NULL");
-		else
-			ft_print_result(str_dup);
-		if (str_dup == str)
-			ft_print_result("\nstr_dup's adress == str's adress");
-	}
+	
+	str_dup = ft_strdup(str);
+	ft_print_result(str_dup);
 	return (0);
 }

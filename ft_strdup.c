@@ -6,7 +6,7 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 13:40:28 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/26 19:14:48 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/09/26 19:21:00 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_print_result(char const *s)
 	write(1, s, len);
 }
 
-int		main(int argc, const char *argv[])
+int		main(void)
 {
 	char	str[] = "lorem ipsum dolor sit amet";
 	char	*str_dup;

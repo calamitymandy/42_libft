@@ -1,51 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 13:40:28 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/27 15:58:25 by amdemuyn         ###   ########.fr       */
+/*   Created: 2022/09/27 18:32:20 by amdemuyn          #+#    #+#             */
+/*   Updated: 2022/09/27 19:10:31 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		len;
-	char	*str;
+	size_t	i;
+	size_t	j;
+	char	*dst;
 
 	i = 0;
-	len = ft_strlen(s1);
-	str = (char *)malloc(sizeof(*str) * (len + 1));
-	while (i < len)
+	j = 0;
+	dst = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (dst == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		str[i] = s1[i];
+		dst[i] = s1[i];
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	while (s2[j] != '\0')
+	{
+		dst[i + j] = s2[j];
+		j++;
+	}
+	dst[i + j] = '\0';
+	return (dst);
 }
 
-/*void	ft_print_result(char const *s)
+/*int	main(void)
 {
-	int		len;
+	char	s1[] = "hello";
+	char	s2[] = " you!";
 
-	len = 0;
-	while (s[len])
-		len++;
-	write(1, s, len);
-}
-
-int		main(void)
-{
-	char	str[] = "lorem ipsum dolor sit amet";
-	char	*str_dup;
-	
-	str_dup = ft_strdup(str);
-	ft_print_result(str_dup);
-	return (0);
+	printf("%s", ft_strjoin(s1, s2));
 }*/

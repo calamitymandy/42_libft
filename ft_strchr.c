@@ -6,7 +6,7 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:30:05 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/22 16:12:40 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/09/28 14:11:26 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 
 /*int	main(void)
 {
-	char	s[] = "hello how are you";
+	char	s[] = "hello how are you?";
 	int	c;
 
 	c = 'o';

@@ -6,13 +6,13 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 15:59:11 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/28 17:00:49 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/09/29 16:21:04 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const*s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const*s1, char const *set)
 		end = ft_strlen(s1);
 		while (s1[start] && ft_strchr(set, s1[start]))
 			start++;
-		while (s1[end -1] && ft_strchr(set, s1[end -1]))
+		while (s1[end -1] && ft_strchr(set, s1[end -1]) && end > start)
 			end--;
 		str = (char *)malloc(sizeof(char) * (end - start + 1));
 		if (str)
@@ -34,8 +34,8 @@ char	*ft_strtrim(char const*s1, char const *set)
 	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	printf("%s", ft_strtrim("abqbc", "abc"));
 	return (0);
-}
+}*/

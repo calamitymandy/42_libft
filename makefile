@@ -6,7 +6,7 @@
 #    By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 16:20:51 by amdemuyn          #+#    #+#              #
-#    Updated: 2022/09/27 19:12:33 by amdemuyn         ###   ########.fr        #
+#    Updated: 2022/09/29 15:55:56 by amdemuyn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	 ft_toupper.c ft_tolower.c \
 	 ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c \
 	 ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c \
-	 ft_substr.c ft_strjoin.c \
+	 ft_substr.c ft_strjoin.c ft_strtrim.c  \
 
 OBJ = $(SRC:.c=.o)
 
@@ -41,7 +41,3 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
-
-test: all
-	./$(NAME)
-

@@ -6,7 +6,7 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 18:32:20 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/28 12:50:14 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:58:33 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (dst);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	s1[] = "hello";
 	char	s2[] = " you!";
 
 	printf("%s", ft_strjoin(s1, s2));
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:53:20 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/29 19:26:24 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/09/30 15:54:53 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ static int	count_words(const char *str, char c)
 		if (str[i] != c)
 		{
 			word++;
-			if (str[i] != c && str[i] != '\0')
+			while (str[i] != c && str[i] != '\0')
 				i++;
 			if (str[i] == '\0')
-			   return (word);	
+				return (word);
 		}
 		i++;
 	}
@@ -54,7 +54,8 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	char	**split;
 
-	if (!s || !(split = malloc(sizeof(char) * (count_words(s, c) +1))))
+	split = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!s || !split)
 		return (0);
 	i = 0;
 	j = 0;
@@ -74,7 +75,7 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str[] = "hello how are you sweetie?";
 	char	**word_split;
@@ -86,4 +87,4 @@ int	main(void)
 	printf("%s\n", word_split[3]);
 	printf("%s\n", word_split[4]);
 	return (0);
-}
+}*/

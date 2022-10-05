@@ -6,7 +6,7 @@
 #    By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 16:20:51 by amdemuyn          #+#    #+#              #
-#    Updated: 2022/10/04 18:30:20 by amdemuyn         ###   ########.fr        #
+#    Updated: 2022/10/05 16:53:31 by amdemuyn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	 ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
 	 ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 	 ft_putendl_fd.c ft_putnbr_fd.c \
-	 ft_lstnew.c \
+	 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 
 OBJ = $(SRC:.c=.o)
 

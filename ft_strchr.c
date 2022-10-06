@@ -6,7 +6,7 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:30:05 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/28 14:11:26 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:38:05 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
+	if (c > 256)
+		c %= 256;
 	while (s[i] != c && s[i] != '\0')
 		i++;
 	if (s[i] == c)

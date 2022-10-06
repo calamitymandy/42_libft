@@ -6,7 +6,7 @@
 #    By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 16:20:51 by amdemuyn          #+#    #+#              #
-#    Updated: 2022/10/05 16:53:31 by amdemuyn         ###   ########.fr        #
+#    Updated: 2022/10/06 14:25:42 by amdemuyn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,13 +32,13 @@ OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(OBJ)
 	$(CC) $(FLAGS) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
 clean:
-	rm -rf $(OBJ) $(BONUS)
+	rm -rf $(OBJ)
 
 fclean: clean
 	rm -rf $(NAME)

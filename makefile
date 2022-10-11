@@ -6,7 +6,7 @@
 #    By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 16:20:51 by amdemuyn          #+#    #+#              #
-#    Updated: 2022/10/10 19:52:34 by amdemuyn         ###   ########.fr        #
+#    Updated: 2022/10/11 16:12:30 by amdemuyn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	 
 SRC_B = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
-		ft_lstiter.c \
+		ft_lstiter.c ft_lstmap.c \
 
 OBJ = $(SRC:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)

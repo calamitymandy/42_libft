@@ -6,9 +6,12 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 17:54:27 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/10/06 18:24:05 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/10/11 16:59:34 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* copie src sur dst con memcpy, si src est inférieur à dst, il laisse en 
+ * place les caractères de dst supérieurs à len */
 
 #include "libft.h"
 
@@ -35,8 +38,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 /*int	main(void)
 {
-	char	src[] = "j'en ai marre";
-	char	dst[] = "bofffff";
+	char	src[] = "123456789";
+	char	dst[] = "abcdefghijk";
 
 	printf("%s", ft_memmove(dst, src, 6));
 }*/

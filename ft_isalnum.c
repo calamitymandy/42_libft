@@ -22,5 +22,5 @@ int	ft_isalnum(int c)
 
 /*int	main(void)
 {
-	printf("%d", ft_isalnum('0'));
+	printf("%d", ft_isalnum('9'));
 }*/

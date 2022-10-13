@@ -29,7 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	char	s[] = "blablabliblu";
 	int	c;
 
-	c = 'c';
-	printf("%s", ft_memchr(s, c, 12));
+	c = 'a';
+	printf("%s", ft_memchr(s, c, 5));
 	return (0);
 }*/

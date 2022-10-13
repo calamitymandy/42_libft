@@ -29,7 +29,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 /*int	main(void)
 {
 	char	s1[] = "ad";
-	char	s2[] = "ax";
+	char	s2[] = "as";
 
 	printf("%d", ft_strncmp(s1, s2, 5));
 	return (0);

@@ -21,5 +21,5 @@ int	ft_isascii(int c)
 
 /*int	main(void)
 {
-	printf("%d", ft_isascii('5'));
+	printf("%d", ft_isascii('-'));
 }*/

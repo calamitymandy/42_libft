@@ -22,5 +22,5 @@ int	ft_isdigit(int c)
 
 /*int	main(void)
 {
-	printf("%d", ft_isdigit('a'));
+	printf("%d", ft_isdigit('9'));
 }*/

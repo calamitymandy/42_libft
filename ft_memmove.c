@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* copie src sur dst con memcpy, si src est inférieur à dst, il laisse en 
- * place les caractères de dst supérieurs à len */
+/* dest CAN overlap source.
+copie src sur dst con memcpy, si src est inférieur à dst, il laisse en 
+place les caractères de dst supérieurs à len */
 
 #include "libft.h"
 
@@ -39,7 +40,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 /*int	main(void)
 {
 	char	src[] = "123456789";
-	char	dst[] = "abcdefghijk";
+	char	dst[] = "abcdefghijklmnop";
 
-	printf("%s", ft_memmove(dst, src, 6));
+	printf("%s", ft_memmove(dst, src, 5));
 }*/

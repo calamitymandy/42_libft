@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* dest cannot overlap source at all */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
@@ -33,8 +35,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 /*int	main(void)
 {
-	char	dst[] = "voy a ver";
-	char	src[] = "pffffff";
+	char	dst[] = "unafrase";
+	char	src[] = "shit";
 
-	printf("%s", ft_memcpy(dst, src, 4));
+	printf("%s", ft_memcpy(dst, src, 6));
 }*/

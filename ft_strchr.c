@@ -31,7 +31,7 @@ char	*ft_strchr(const char *s, int c)
 	char	s[] = "hello how are you?";
 	int	c;
 
-	c = 'o';
+	c = 'w';
 	printf("%s", ft_strchr(s, c));
 	return (0);
 }*/

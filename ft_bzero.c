@@ -22,10 +22,9 @@ void	ft_bzero(void *s, size_t n)
 
 /*int	main(void)
 {
-	char	s[] = "ceci est un test";
+	char	s[] = "abracadabra";
 
 	ft_bzero(s, 2);
-	//bzero(s, 3);//
-	write(1, s, 6);
+	write(1, s, 12);
 	return (0);
 }*/

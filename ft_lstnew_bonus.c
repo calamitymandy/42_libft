@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Alloue (avec malloc(3)) et renvoie un nouvel élément. 
-La variable membre ’content’ est initialisée à l’aide de la valeur du paramètre
+/*Alloue avec malloc et renvoie un nouvel élément. 
+La variable ’content’ est initialisée à l’aide de la valeur du paramètre
 ’content’. La variable ’next’ est initialisée à NULL.*/
 
 #include "libft.h"
@@ -28,7 +28,7 @@ t_list	*ft_lstnew(void *content)
 	return (element);
 }
 
-/*void	ft_print_result(char const *s)
+/* void	ft_print_result(char const *s)
 {
 	int		len;
 
@@ -67,21 +67,6 @@ int main(int argc, const char *argv[])
 				ft_print_result("NULL");
 			else
 				ft_print_result(elem->content);
-		}
-	}
-	else if (arg == 2)
-	{
-		int		i;
-
-		i = 42;
-		if (!(elem = ft_lstnew(&i)))
-				ft_print_result("NULL");
-		else
-		{
-			if (!(elem->content))
-				ft_print_result("NULL");
-			else
-				ft_print_result2(*(int *)(elem->content));
 		}
 	}
 	return (0);

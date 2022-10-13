@@ -23,7 +23,7 @@ int	ft_tolower(int c)
 {
 	int	c;
 
-	c = 'Z';
+	c = 'Y';
 	printf("%c", ft_tolower(c));
 	return (0);
 }*/

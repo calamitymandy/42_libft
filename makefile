@@ -6,9 +6,19 @@
 #    By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 16:20:51 by amdemuyn          #+#    #+#              #
-#    Updated: 2022/10/11 16:12:30 by amdemuyn         ###   ########.fr        #
+#    Updated: 2022/10/12 14:23:43 by amdemuyn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+#ar rc creates a static library and puts copies of the object files in it.
+#If the library file already exists, it adds or replace object file
+#The 'c' flag tells ar to create the library if it doesn't already exist. 
+#The 'r' flag tells it to replace older object files with the new object files.
+
+#ranlib: command used to create or update the index
+#Bc after an archive is created, or modified, there is a need to index it.
+
+#.PHONY: allows to declare phony targets, so that make will not check them as 
+#actual file name.
 
 NAME = libft.a
 
@@ -25,9 +35,9 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	 ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 	 ft_putendl_fd.c ft_putnbr_fd.c \
 	 
-SRC_B = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
-		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
-		ft_lstiter.c ft_lstmap.c \
+SRC_B = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c \
 
 OBJ = $(SRC:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
@@ -38,17 +48,16 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(FLAGS) -c $(SRC)
-	ar rc $(NAME) $(OBJ)
+	ar -rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-bonus: $(OBJ) $(OBJ_B)
+bonus: $(OBJ_B)
 	$(CC) $(FLAGS) -c $(SRC_B)
-	ar rc $(NAME) $(OBJ_B) $(OBJ)
+	ar -rc $(NAME) $(OBJ_B) $(OBJ)
 	ranlib $(NAME)
 
 clean:
-	rm -rf $(OBJ)
-	rm -rf $(OBJ_B)
+	rm -rf $(OBJ) $(OBJ_B)
 
 fclean: clean
 	rm -rf $(NAME)

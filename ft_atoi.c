@@ -39,7 +39,7 @@ int	ft_atoi(const char *str)
 
 /*int	main(void)
 {
-	char	str[] = "  698584";
+	char	str[] = "  698585";
 
 	printf("%d", ft_atoi(str));
 }*/

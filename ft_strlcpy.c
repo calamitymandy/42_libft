@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* strlcpy() take the full size of the destination buffer and guarantee 
+NUL-termination if there is room. room for NUL should be included in dstsize.
+strlcpy() copies up to dstsize - 1 characters from the string src to dst,
+NUL-terminating the result if dstsize is not 0.
+Function returns the total length of the string it tried to create.
+For strlcpy() that means the length of src. */
+
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -38,7 +45,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 /*int	main(void)
 {
 	char	dst[] = "testtesttesttesttest";
-	char	src[] = "u";
+	char	src[] = "bubul";
 
 	printf("%zu", ft_strlcpy(dst, src, 15));
 }*/

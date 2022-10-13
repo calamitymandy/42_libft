@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* locates the last occurrence of c */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -32,10 +34,10 @@ char	*ft_strrchr(const char *s, int c)
 
 /*int	main(void)
 {
-	char	s[] = "hello how are you";
+	char	s[] = "Comment ça va petit chat";
 	int	c;
 
-	c = 'o';
+	c = 'e';
 	printf("%s", ft_strrchr(s, c));
 	return (0);
 }*/

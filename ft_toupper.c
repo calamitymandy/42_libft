@@ -23,7 +23,7 @@ int	ft_toupper(int c)
 {
 	char	c;
 
-	c = 'f';
+	c = 'k';
 	printf("%c", ft_toupper(c));
 	return (0);
 }*/

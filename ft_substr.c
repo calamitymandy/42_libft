@@ -35,9 +35,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 /*int	main(void)
 {
-	char	s[] = "hello";
+	char	s[] = "Magnifaique";
 	
-	printf("%lu\n", sizeof(*s));
-	printf("%s", ft_substr(s, 2, 3));
+	printf("%s", ft_substr(s, 2, 4));
 	return (0);
 }*/

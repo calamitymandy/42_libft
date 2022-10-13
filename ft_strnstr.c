@@ -41,7 +41,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 /*int	main(void)
 {
 	char	haystack[] = "hello how are you";
-	char	needle[] = "how";
+	char	needle[] = "are";
 
 	printf("%s", ft_strnstr(haystack, needle, 17));
 	return (0);

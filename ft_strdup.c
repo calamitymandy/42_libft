@@ -44,10 +44,10 @@ char	*ft_strdup(const char *s1)
 
 int		main(void)
 {
-	char	str[] = "lorem ipsum dolor sit amet";
+	char	stri[] = "lorem ipsum dolor sit amet";
 	char	*str_dup;
 	
-	str_dup = ft_strdup(str);
+	str_dup = ft_strdup(stri);
 	ft_print_result(str_dup);
 	return (0);
 }*/

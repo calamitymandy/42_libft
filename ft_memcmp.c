@@ -29,7 +29,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /*int	main(void)
 {
 	char	s1[] = "hello";
-	char	s2[] = "hella";
+	char	s2[] = "hellu";
 
 	printf("%d", ft_memcmp(s1, s2, 5));
 	return (0);

@@ -31,9 +31,6 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	char	str[15] = "uiuifhw";
 
-	printf("%s\n", str);
-	memset(NULL, 'z', 5);
-	printf("%s\n", ft_memset(NULL, 'z', 5));
-	printf("%s\n", str);
+	printf("%s\n", ft_memset(str, 'z', 5));
 	return (0);
 }*/

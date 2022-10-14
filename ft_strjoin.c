@@ -40,7 +40,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 /*int	main(void)
 {
 	char	s1[] = "hello";
-	char	s2[] = " you!";
+	char	s2[] = " you";
 
 	printf("%s", ft_strjoin(s1, s2));
 }*/

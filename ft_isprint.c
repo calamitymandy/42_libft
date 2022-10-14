@@ -6,7 +6,7 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 14:34:21 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/22 17:51:03 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/10/14 14:07:06 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int	ft_isprint(int c)
 
 /*int	main(void)
 {
-	printf("%d", ft_isprint('%'));
+	printf("%d", ft_isprint('?'));
 }*/

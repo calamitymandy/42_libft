@@ -6,7 +6,7 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:14:12 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/14 17:29:59 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/10/14 14:14:17 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ size_t	ft_strlen(const char *s)
 
 /*int	main(void)
 {
-	printf("%zu", ft_strlen("ceci est un test"));
+	printf("%zu", ft_strlen("voici un test"));
 }*/

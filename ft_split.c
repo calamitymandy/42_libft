@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* count_words: con i recorre el string hasta encontrarse con c(=espacio) y va 
+aumentado word cada vez que se encuentra con un espacio.
+word_sep: pinta la cadena propia de cada palabra */
+
 #include "libft.h"
 
 static int	count_words(const char *str, char c)

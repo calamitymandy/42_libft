@@ -1,14 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:54:37 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/10/10 19:46:43 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:13:25 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Supprime et libère la mémoire de l’élément passé en paramètre, et de tous 
+les éléments qui suivent, à l’aide de ’del’ et de free */
 
 #include "libft.h"
 

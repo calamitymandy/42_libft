@@ -10,13 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* se añaden los 2 if del while para que el atoi funcione 
+con over long max value*/
+
 #include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	neg;
-	int	res;
+	int				i;
+	int				neg;
+	unsigned long	res;
 
 	i = 0;
 	neg = 1;
@@ -32,6 +35,10 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = (str[i] - 48) + (res * 10);
+		if (res > 9223372036854775808UL && neg == -1)
+			return (0);
+		if (res > 9223372036854775808UL && neg == 1)
+			return (-1);
 		i++;
 	}
 	return (res * neg);

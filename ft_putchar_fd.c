@@ -21,7 +21,7 @@ void	ft_putchar_fd(char c, int fd)
 {
 	char	c;
 
-	c = 'Z';
+	c = 'A';
 	ft_putchar_fd(c, 1);
 	return (0);
 }*/

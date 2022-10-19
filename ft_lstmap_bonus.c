@@ -1,14 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:34:03 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/10/11 16:28:40 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:13:50 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Itère sur la liste ’lst’ et applique la fonction ’f’ au contenu de chaque 
+élément. Crée une nouvelle liste résultant des applications successives de
+’f’. 
+La fonction ’del’ détruit le contenu d’un élément si nécessaire. */
 
 #include "libft.h"
 

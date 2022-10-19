@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
@@ -40,7 +42,7 @@ int		main(void)
 
 	str = (char *)malloc(sizeof(*str) * 12);
 
-		strcpy(str, "LoReM iPsUm");
+		strcpy(str, "LoReMiPsUm");
 		ft_striteri(str, &test);
 		write(1, str, 11);
 	

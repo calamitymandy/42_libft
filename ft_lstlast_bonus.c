@@ -38,24 +38,20 @@ t_list	*ft_lstlast(t_list *lst)
 	t_list		*elem;
 	t_list		*elem2;
 	t_list		*elem3;
-	t_list		*elem4;
 	char		*str = strdup("lorem");
 	char		*str2 = strdup("ipsum");
 	char		*str3 = strdup("dolor");
-	char		*str4 = strdup("sit");
 
 	elem = ft_lstnew(str);
 	elem2 = ft_lstnew(str2);
 	elem3 = ft_lstnew(str3);
-	elem4 = ft_lstnew(str4);
 
-	if (argc == 1 || !elem || !elem2 || !elem3 || !elem4)
+	if (argc == 1 || !elem || !elem2 || !elem3)
 		return (0);
 	else if (atoi(argv[1]) == 1)
 	{
 		elem->next = elem2;
 		elem2->next = elem3;
-		elem3->next = elem4;
 		val = ft_lstlast(elem);
 		i = 0;
 		content = val->content;

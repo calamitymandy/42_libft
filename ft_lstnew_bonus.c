@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:30:25 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/10/05 16:04:15 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:10:18 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_lstnew(void *content)
 	return (element);
 }
 
-/* void	ft_print_result(char const *s)
+/*void	ft_print_result(char const *s)
 {
 	int		len;
 
@@ -57,7 +57,7 @@ int main(int argc, const char *argv[])
 		return (0);
 	else if ((arg = atoi(argv[1])) == 1)
 	{
-		char	str [] = "lorem ipsum dolor sit";
+		char	str [] = "lorem ipsum dolor";
 
 		if (!(elem = ft_lstnew(str)))
 			ft_print_result("NULL");

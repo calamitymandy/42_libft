@@ -34,24 +34,20 @@ int	ft_lstsize(t_list *lst)
 	t_list		*elem;
 	t_list		*elem2;
 	t_list		*elem3;
-	t_list		*elem4;
 	char		c;
 	char		*str = strdup("lorem");
 	char		*str2 = strdup("ipsum");
 	char		*str3 = strdup("dolor");
-	char		*str4 = strdup("sit");
 
 	elem = ft_lstnew(str);
 	elem2 = ft_lstnew(str2);
 	elem3 = ft_lstnew(str3);
-	elem4 = ft_lstnew(str4);
-	if (argc == 1 || !elem || !elem2 || !elem3 || !elem4)
+	if (argc == 1 || !elem || !elem2 || !elem3)
 		return (0);
 	else if (atoi(argv[1]) == 1)
 	{
 		elem->next = elem2;
 		elem2->next = elem3;
-		elem3->next = elem4;
 		c = ft_lstsize(elem) + 48;
 		write(1, &c, 1);
 		write(1, "\n", 1);

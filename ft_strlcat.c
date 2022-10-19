@@ -6,7 +6,7 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 18:21:16 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/23 15:01:49 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/10/18 17:52:59 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	j = 0;
+	if (dstsize == 0 && (!dst || !src))
+		return (0);
 	while (dst[i] && i < dstsize)
 		i++;
 	while (src[j] && (i + j + 1) < dstsize)

@@ -60,7 +60,7 @@ char	*ft_itoa(int n)
 
 /*int	main(void)
 {
-	int	n = 0;
+	int	n = 22;
 
 	printf("%s", ft_itoa(n));
 	return (0);

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Itère sur la liste ’lst’ et applique la fonction ’f’ au contenu de 
+chaque élément.*/
+
 #include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))

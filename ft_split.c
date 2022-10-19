@@ -6,11 +6,15 @@
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 18:53:20 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/09/30 19:07:22 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:20:01 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* count_words: con i recorre el string hasta encontrarse con c(=espacio) y va 
+/* ft_split primera llama a count_words para reservar tantos punteros como
+palabras. Despues va recorriendo el string hasta encontrar el 1er espacio,
+llama a word_sep y reinicializa index a -1, si hay mas cadena que recorrer,
+pasa el valor de i a index para seguir hasta el prox espacio o fin de cadena.
+count_words: con i recorre el string hasta encontrarse con c(=espacio) y va 
 aumentado word cada vez que se encuentra con un espacio.
 word_sep: pinta la cadena propia de cada palabra */
 
@@ -51,17 +55,11 @@ static char	*word_sep(const char *str, int start, int end)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static char	*ft_splat(size_t i, char const *s, char c, char **split)
 {
-	size_t	i;
 	size_t	j;
 	int		index;
-	char	**split;
 
-	split = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!s || !split)
-		return (0);
-	i = 0;
 	j = 0;
 	index = -1;
 	while (i <= ft_strlen(s))
@@ -76,6 +74,21 @@ char	**ft_split(char const *s, char c)
 		i++;
 	}
 	split[j] = 0;
+	return (split[j]);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	i;
+	char	**split;
+
+	if (!s)
+		return (NULL);
+	split = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!split)
+		return (NULL);
+	i = 0;
+	ft_splat(i, s, c, split);
 	return (split);
 }
 

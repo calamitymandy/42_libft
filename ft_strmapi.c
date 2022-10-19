@@ -32,7 +32,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-/*char	mapi(unsigned int i, char c)
+/*char	test(unsigned int i, char c)
 {
 	static int indexArray[11] = {0};
 
@@ -49,6 +49,6 @@ int	main(void)
 {
 	char	s[] = "HeLlO YoU";
 	
-	printf("%s", ft_strmapi(s, &mapi));
+	printf("%s", ft_strmapi(s, &test));
 	return (0);
 }*/

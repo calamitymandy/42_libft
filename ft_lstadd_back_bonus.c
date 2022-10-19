@@ -45,18 +45,14 @@ int main(int argc, const char *argv[])
 	t_list		*elem;
 	t_list		*elem2;
 	t_list		*elem3;
-	t_list		*elem4;
 	char		*str = strdup("lorem");
 	char		*str2 = strdup("ipsum");
 	char		*str3 = strdup("dolor");
-	char		*str4 = strdup("sit");
 
 	elem = ft_lstnew(str);
 	elem2 = ft_lstnew(str2);
 	elem3 = ft_lstnew(str3);
-	elem4 = ft_lstnew(str4);
-	alarm(5);
-	if (argc == 1 || !elem || !elem2 || !elem3 || !elem4)
+	if (argc == 1 || !elem || !elem2 || !elem3)
 		return (0);
 	else if (atoi(argv[1]) == 1)
 	{
@@ -64,7 +60,6 @@ int main(int argc, const char *argv[])
 		ft_lstadd_back(&begin, elem);
 		ft_lstadd_back(&begin, elem2);
 		ft_lstadd_back(&begin, elem3);
-		ft_lstadd_back(&begin, elem4);
 		while (begin)
 		{
 			ft_print_result(begin);

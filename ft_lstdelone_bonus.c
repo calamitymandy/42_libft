@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:05:38 by amdemuyn          #+#    #+#             */
-/*   Updated: 2022/10/10 16:12:09 by amdemuyn         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:12:06 by amdemuyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del (lst->content);
-	free (lst);
+	if (!lst)
+		return ;
+	if (del)
+	{
+		del (lst->content);
+		free (lst);
+	}
 }
 
 /*void	ft_print_result(t_list *elem)
@@ -53,18 +58,15 @@ int main(int argc, const char *argv[])
 		ft_lstdelone(elem3, &ft_del);
 		if (elem)
 			ft_print_result(elem);
-		else
-			write(1, "NULL", 4);
 		write(1, "\n", 1);
 		if (elem2)
 			ft_print_result(elem2);
-		else
-			write(1, "NULL", 4);
+		write(1, "\n", 1);
+		if (elem3)
+			ft_print_result(elem3);
 		write(1, "\n", 1);
 		if (elem4)
 			ft_print_result(elem4);
-		else
-			write(1, "NULL", 4);
 	}
 	return (0);
 }*/

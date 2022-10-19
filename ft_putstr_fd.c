@@ -14,12 +14,14 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	write(fd, s, ft_strlen(s));
 }
 
 /*int	main(void)
 {
-	char	s[] = "va te poncer la bite";
+	char	s[] = "Va te poncer la bite";
 
 	ft_putstr_fd(s, 1);
 	return (0);

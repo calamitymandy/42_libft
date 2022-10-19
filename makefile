@@ -6,7 +6,7 @@
 #    By: amdemuyn <amdemuyn@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 16:20:51 by amdemuyn          #+#    #+#              #
-#    Updated: 2022/10/18 17:44:02 by amdemuyn         ###   ########.fr        #
+#    Updated: 2022/10/19 16:18:11 by amdemuyn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #ar rc creates a static library and puts copies of the object files in it.
@@ -70,12 +70,12 @@ SRC_B = ft_lstnew_bonus.c \
 OBJ = $(SRC:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
 
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 CC = gcc
 
 %.o: %.c
-	$(CC) $(FLAGS) -c $<
+	$(CC) $(CFLAGS) -c $<
 all: $(NAME)
 
 $(NAME): $(OBJ)
